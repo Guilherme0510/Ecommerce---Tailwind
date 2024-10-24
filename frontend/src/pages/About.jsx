@@ -1,11 +1,78 @@
-import React from 'react'
+import React from "react";
+import Title from "../components/Title";
+import { assets } from "../assets/frontend_assets/assets";
+import Newsletterbox from "../components/Newsletterbox";
 
 const About = () => {
   return (
     <div>
-      
-    </div>
-  )
-}
+      <div className="text-2xl text-center pt-8 border-t">
+        <Title text1={"ABOUT"} text2={"US"} />
+      </div>
+      <div className="my-10 flex flex-col md:flex-row gap-16">
+        <img
+          className="w-full md:max-w-[450px]"
+          src={assets.about_img}
+          alt=""
+        />
+        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quod
+            beatae dignissimos voluptas fuga illo explicabo laudantium
+            repudiandae voluptatum ipsam, quo eum optio deserunt cupiditate
+            quidem aliquam corporis vero autem?
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
+            inventore ad. Omnis iusto porro ab earum, similique quasi obcaecati
+            rerum in aspernatur molestias. Saepe in unde esse beatae ducimus
+            quam?
+          </p>
+          <b className="text-gray-800">Our Mission</b>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+            aliquid cum? Aliquam ab et obcaecati beatae! Odio possimus quibusdam
+            debitis. Unde laborum quod molestiae quia reiciendis quasi cumque ea
+            sapiente.
+          </p>
+        </div>
+      </div>
+      <div className="text-xl py-4">
+        <Title text1={"WHY"} text2={"CHOOSE US"} />
+      </div>
+      <div className="flex flex-col md:flex-row text-sm mb-20">
+        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
+          <b>Quality Assurance:</b>
+          <p className="text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vel
+            sapiente sunt assumenda impedit! Nobis molestias, nemo natus
+            laudantium eveniet nulla velit, nihil officia enim sint facere esse
+            quaerat asperiores!
+          </p>
+        </div>
+        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
+          <b>Convenience:</b>
+          <p className="text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vel
+            sapiente sunt assumenda impedit! Nobis molestias, nemo natus
+            laudantium eveniet nulla velit, nihil officia enim sint facere esse
+            quaerat asperiores!
+          </p>
+        </div>
+        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
+          <b>Exceptional Customer Service:</b>
+          <p className="text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vel
+            sapiente sunt assumenda impedit! Nobis molestias, nemo natus
+            laudantium eveniet nulla velit, nihil officia enim sint facere esse
+            quaerat asperiores!
+          </p>
+        </div>
+      </div>
 
-export default About
+      <Newsletterbox />
+    </div>
+  );
+};
+
+export default About;
