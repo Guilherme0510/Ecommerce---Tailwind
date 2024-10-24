@@ -18,7 +18,7 @@ const Verify = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:4000/api/order/verifystripe",
+        "https://ecommerce-tailwind-ww55.onrender.com/api/order/verifystripe",
         { success, orderId },
         { headers: { token } }
       );
