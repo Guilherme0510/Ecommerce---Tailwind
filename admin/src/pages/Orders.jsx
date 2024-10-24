@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { currency } from "../App";
+import { backendUrl, currency } from "../App";
 import { assets } from "../assets/admin_assets/assets";
 
 const Orders = ({ token }) => {
@@ -14,8 +14,8 @@ const Orders = ({ token }) => {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:4000/api/order/list",
+      const response = await axios.post( 
+        "https://ecommerce-tailwind-ww55.onrender.com/api/order/list",
         {},
         { headers: { token } }
       );
@@ -33,7 +33,7 @@ const Orders = ({ token }) => {
 
   const statusHandler = async (e, orderId) => {
     try {
-      const response = await axios.post("http://localhost:4000/api/order/status", 
+      const response = await axios.post(backendUrl + '/api/order/status', 
       {orderId, status:e.target.value},
     {headers: {token}})
     if (response.data.success) {
